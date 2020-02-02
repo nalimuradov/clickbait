@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>ytAPI</title>
+</head>
+<body>
+
+    <div class="login">
+        <form action="{{ url_for('display')}}"method="post">
+            <input type="text" name="Video Title" placeholder="Video Title" required="required" />
+            <input type="file" name="Thumbnail" required="required" />
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+
+</body>
+</html>
