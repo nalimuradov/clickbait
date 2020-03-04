@@ -1,22 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <meta charset="UTF-8">
     <title>ytAPI</title>
+    <style>
+        html {
+            background-size: cover;
+            height: 100%;
+            overflow: auto;
+        }
+        body {
+            background-image: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+            font-size: 60px;
+        }
+        body, input[type="text"], button, input[type="file"] {
+            margin-top: 10px;
+            font-family: "Indie Flower"; font-size: 22px;
+        }
+        .get_views {
+            margin:auto; max-width: 300px;
+        }
+        button {
+            justify-content:center;
+        }
+        input[type="text"] {
+            width: 300px;
+        }
+        .output_text {
+            font-size: 48px;
+            text-align:center;
+        }
+        #thumb {
+            height: 200px;
+            border: 1px solid #000;
+            margin: 10px 5px 0 0;
+        }
+        h1 {
+            margin:auto;
+        }
+
+        .loader {
+          border: 16px solid #f3f3f3; /* Light grey */
+          border-top: 16px solid #3498db; /* Blue */
+          border-radius: 50%;
+          width: 120px;
+          height: 120px;
+          animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-
-    <div class="login">
+    <div class="get_views">
         <form action="{{ url_for('display')}}"method="post">
-            <input type="text" name="Video Title" placeholder="Video Title" required="required" />
-            <input type="file" name="Thumbnail" required="required" />
+            <input type="text" name="Video Title" placeholder=" Video Title" required="required" />
+            <input type="file" name="Thumbnail" id="img_file" placeholder="Thumbnail"/>
+            <img id="thumb" src="#"/>
+            <input type="text" name="Subscriber Count" placeholder=" Subscriber Count" required="required" />
+            <br>
             <button type="submit" class="btn btn-primary">Predict</button>
         </form>
+        <div class="loader"></div>
         <br>
-        <br>
-        {{ prediction_text }}
+        <div class="output_text">
+            {{ prediction_text }}
+        </div>
+
     </div>
+
+    <script>
+        function readImage(input){
+            if (input.files && input.files[0]){
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#thumb').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $('#img_file').change(function(){
+            readImage(this);
+        });
+    </script>
 
 </body>
 </html>

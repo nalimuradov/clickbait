@@ -17,15 +17,18 @@ def home():
 @app.route('/api/', methods=['POST'])
 def display():
     data = [x for x in request.form.values()]
-    print(data[0])
-    prediction = predict(data[0])
-    return render_template('index.html', prediction_text='Proportion: {}'.format(prediction))
+    vid_title = data[0]
+    thumbnail = data[1]
+    sub_count = int(data[2])
+    prediction = predict(vid_title, sub_count)
+    return render_template('index.html', prediction_text='{} views'.format(prediction))
 
 
-def predict(title):
+def predict(title, sub_count):
     img_model = pickle.load(open('models/img_model.sav', 'rb'))
     nlp_model = pickle.load(open('models/nlp_model.sav', 'rb'))
 
+    # temp
     response = requests.get('https://i.ytimg.com/vi/xfQBkdLa6fo/default.jpg')
     img = [numpy.asarray(Image.open(BytesIO(response.content))).flatten()]
 
@@ -34,9 +37,10 @@ def predict(title):
     img_predict = img_model.predict(img)
     nlp_predict = nlp_model.predict(title)
 
-    expected_view_ratio = "{:.2f}".format((img_predict[0] + nlp_predict[0]) / 2)
+    expected_view_ratio = float("{:.10f}".format((img_predict[0] + nlp_predict[0]) / 2))
+    print(sub_count)
     print(expected_view_ratio)
-    return expected_view_ratio
+    return int(expected_view_ratio * sub_count)
 
 
 if __name__ == "__main__":

@@ -1,9 +1,12 @@
 import json
 import nltk
 from nltk.corpus import stopwords
+import nltk
 from sklearn import linear_model
 import pickle
 from gensim.models import Word2Vec
+
+# nltk.download('popular')
 
 # INPUT: training data (dictionary)
 # OUTPUT: trained model
