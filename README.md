@@ -6,12 +6,12 @@ Can take up to 30sec to load.
 
 ###  Predicting the Success of a YouTube Video
 
-###### Introduction:
+##### Introduction:
 
 Clickbait
 
 
-The Data:
+##### The Data:
 
 Video data was obtained using the Youtube API. I found various 'creator' channels on YouTube
 
@@ -24,12 +24,7 @@ It's also important to
 [Insert Image Here]
 
 
-Findings:
+##### Findings and What I Learned:
 
-
-
-
-
-What I Learned:
 
 The thumbnail and the title alone cannot predict how successful a video will be. 
