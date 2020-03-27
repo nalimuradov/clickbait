@@ -4,6 +4,8 @@ https://nariman.herokuapp.com/
 
 Can take up to 30sec to load.
 
+** Some parts of the project such as the models or data are not in the repo due to size/privacy issues.
+
 ###  Predicting the Success of a YouTube Video
 
 #### Introduction:
