@@ -9,7 +9,7 @@ Some parts of the project such as the models or data are not in the repo due to 
 
 #### Introduction:
 
-Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. Especially on YouTube, creators must maximize views in order to earn money and grow their channel. To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
+Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. For example on YouTube, creators want to maximize views in order to earn money and grow their channel. If a creator wants to catch the attention of a new viewer, they must do so with the only things they see on their recommended bar: the title of the video and the thumbnail image. To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
 
