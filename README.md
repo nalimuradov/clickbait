@@ -30,23 +30,13 @@ Video recency is also important when selecting videos. Older videos are in the c
 growth of the channel over time.
 
 
-##### NLP Side: Extracting information from the video title
+##### Extracting information from the video title
 
 I decided against using a bag of words as I didn't have nearly enough data to prevent overfitting. Instead I used NLTK's part-of-speech tagger and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
 
-I used 21 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count sequential pairs of tags found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find
+I used 21 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count sequential pairs of tags found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find sequences of tags that get more views than others.
 
-To further 
-penn treebank pos tags
-poscounts of only popular ones (36 -> 22)
- - saves lots of space, can even fuse like NN and NNS
-find pairs for pseudo position
- - eg. NN followed by JJ followed by...
-decided not to use words themselves as it will overfit
- - eg. cant assume will get all youtube videos
- - as such not perfectly random, as nearly everything
-
-##### CV Side: Extracting information from the thumbnail image
+##### Extracting information from the thumbnail image
 
 The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos couldn't guarantee having higher resolution thumbnails. Keeping it simple, I decided against using a pretrained net and relied on a basic regressor to see if any correlations are found. This part was fairly straightforward.
 
