@@ -5,9 +5,9 @@ https://nariman.herokuapp.com/
 Can take up to 30 seconds to load.
 Some parts of the project such as the models or data are not in the repo due to size/privacy issues.
 
-###  Predicting the Success of a YouTube Video
+##  Predicting the Success of a YouTube Video
 
-#### Introduction:
+### Introduction:
 
 Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. Creators on platforms such as YouTube want to maximize views in order to earn money and grow their channel. 
 
@@ -21,7 +21,9 @@ Above is an example of what you see when you are recommended a video. The title 
 
 NOTE: I am not affiliated with any of the channels used in the images.
 
-#### The Data:
+
+
+### The Data:
 
 Obtaining suitable data was the most difficult part. The videos we want are the videos whose goal is to get viewed by as many people as possible. These are channels whose goal are to grow their platform through their content on the channel. As such, we must exclude videos like those for school projects, whose goal
 
@@ -31,20 +33,19 @@ The title and thumbnail will be converted into vectors to be used as the feature
 Video recency is also important when selecting videos. Older videos are in the context of fewer subscribers and we must account for the
 growth of the channel over time.
 
-
-##### Extracting information from the video title
+#### Extracting information from the video title
 
 I decided against using a bag of words as I didn't have nearly enough data to prevent overfitting. Instead I used NLTK's part-of-speech tagger and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
 
 I used 21 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count sequential pairs of tags found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find sequences of tags that get more views than others.
 
-##### Extracting information from the thumbnail image
+#### Extracting information from the thumbnail image
 
 The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos couldn't guarantee having higher resolution thumbnails. Keeping it simple, I decided against using a pretrained net and relied on a basic regressor to see if any correlations are found. This part was fairly straightforward.
 
 
 
-#### Results:
+### Results:
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
 
 Bad Videos - I don't want to show videos as 'bad' as they aren't but less successful. eg. titles like 'vidcon vlog 9: joe smith'
