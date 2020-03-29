@@ -11,7 +11,7 @@ Some parts of the project such as the models or data are not in the repo due to 
 
 Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. Creators on platforms such as YouTube want to maximize views in order to earn money and grow their channel. 
 
-If a creator wants to catch the attention of a new viewer, they must do so with the only things they see on their recommended bar: the title of the video and the thumbnail image. 
+If a YouTube creator wants to catch the attention of a new viewer, they must do so with the only things they see on their recommended bar: the **title of the video** and the **thumbnail image**. 
 
 I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all.
 
