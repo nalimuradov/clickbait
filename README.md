@@ -12,7 +12,7 @@ Some parts of the project such as the models or data are not in the repo due to 
 Garnering YouTube views . To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
 
 Inline-style: 
-![alt text](https://github.com/nalimuradov/Video-View-Predictor/img1.png "Logo Title Text 1")
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/img1.png "Logo Title Text 1")
 
 [Image here of youtueb title and video]
 
