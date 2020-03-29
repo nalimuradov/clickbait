@@ -9,10 +9,13 @@ Some parts of the project such as the models or data are not in the repo due to 
 
 #### Introduction:
 
-Garnering YouTube views . To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
+Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. Especially on YouTube, creators must maximize views in order to earn money and grow their channel. To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/img1.png "Logo Title Text 1")
-An example of what you see when you are recommended a video.
+
+Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or not, assuming you are not familiar with the channel.
+
+NOTE: I am not affiliated with any of the channels used in the images.
 
 #### The Data:
 
