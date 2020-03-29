@@ -9,7 +9,9 @@ Some parts of the project such as the models or data are not in the repo due to 
 
 #### Introduction:
 
-Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. For example on YouTube, creators want to maximize views in order to earn money and grow their channel. If a creator wants to catch the attention of a new viewer, they must do so with the only things they see on their recommended bar: the title of the video and the thumbnail image. To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
+Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. For example on YouTube, creators want to maximize views in order to earn money and grow their channel. 
+
+If a creator wants to catch the attention of a new viewer, they must do so with the only things they see on their recommended bar: the title of the video and the thumbnail image. To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
 
@@ -19,18 +21,22 @@ NOTE: I am not affiliated with any of the channels used in the images.
 
 #### The Data:
 
-Hardest part was to find 'suitable data'. (eg. music artists, people aren't watching one video over the other because of the title)
-Video data was obtained using the Youtube API. I found various 'creator' channels on YouTube who are representative of . These aren't 
-music videos or random uploads for a school project. These are 
-Many videos on the platform . Picking random videos 
+Obtaining suitable data was the most difficult part. The videos we want are the videos whose goal is to get viewed by as many people as possible. These are channels whose goal are to grow their platform through their content on the channel. As such, we must exclude videos like those for school projects, whose goal
 
-These are channels whose goal are to grow their platform through their content on the channel. This is as opposed to musicians like
-Drake who don't need to aptly name their videos. His content  
+Now that we have the videos, we need to extract the title, thumbnail URL, view count, and channel subscriber count for each one.
+The title and thumbnail will be converted into vectors to be used as the features, and the view count will be the label. It's clear we need the subscriber count to put the view count in context; a 10 000 view video for a 100 000 subscriber channel is low, but it's high for a channel with only 1 000 subscribers. 
+
+Video recency is also important when selecting videos. Older videos are in the context of fewer subscribers and we must account for the
+growth of the channel over time.
 
 
-For each video, I extracted the title, the thumbnail URL, the viewcount, and the channel subscriber count. 
+##### NLP Side: Extracting information from the video title
 
-The TITLE (NLP SIDE)
+I decided against using a bag of words as I didn't have nearly enough data to prevent overfitting. Instead I used NLTK's part-of-speech tagger and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
+
+I used 21 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count sequential pairs of tags found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find
+
+To further 
 penn treebank pos tags
 poscounts of only popular ones (36 -> 22)
  - saves lots of space, can even fuse like NN and NNS
@@ -40,18 +46,11 @@ decided not to use words themselves as it will overfit
  - eg. cant assume will get all youtube videos
  - as such not perfectly random, as nearly everything
 
-The THUMBNAIL (CV SIDE)
-480x360 image
-no pretraining
-just threw in pixel map as features and view coutn as labels
-to see if any pattern found
+##### CV Side: Extracting information from the thumbnail image
 
-[Insert Image Here]
+The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos couldn't guarantee having higher resolution thumbnails. Keeping it simple, I decided against using a pretrained net and relied on a basic regressor to see if any correlations are found. This part was fairly straightforward.
 
-It's clear we need the subscriber count to put the view count in context; a 10 000 view video for a 100 000 subscriber channel is low, but it's high for a channel with only 1 000 subscribers. The selection process was not random
 
-Video recency is also important when selecting videos. Older videos are in the context of fewer subscribers and we must account for the
-growth of the channel over time. Post frequency also important. If you post 5 videos a day, each video will have fewer views.
 
 #### Results:
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
