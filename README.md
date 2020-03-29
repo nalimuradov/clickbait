@@ -9,15 +9,9 @@ Some parts of the project such as the models or data are not in the repo due to 
 
 #### Introduction:
 
-Garnering YouTube views . To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. 
+Garnering YouTube views . To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
 
 [Image here of youtueb title and video]
-
-
-Clickbait, very controversial but very successful. Wanted to see if it worked. Made regressions models that uses only features the user
-can see before clicking on the video (ie. thumbnail and title). Nothing pretrained, nothing fancy. Clean data with basic SV regressors.
-This test is to strictly see how a YouTuber can go about increasing their exposure. How significant of a role does clickbait play. Below are the results
-
 
 #### The Data:
 
