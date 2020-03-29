@@ -11,7 +11,7 @@ Some parts of the project such as the models or data are not in the repo due to 
 
 Clickbait has been around since the dawn of the internet and continues to strive as advertisers pay based on page view counts. Especially on YouTube, creators must maximize views in order to earn money and grow their channel. To test the effects, I made regression models that only use features the user can see before clicking on the video: the title of the video and the thumbnail image. Using these basic regressors, I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Below are the results.
 
-![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/img1.png "Logo Title Text 1")
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
 
 Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or not, assuming you are not familiar with the channel.
 
@@ -54,12 +54,13 @@ Video recency is also important when selecting videos. Older videos are in the c
 growth of the channel over time. Post frequency also important. If you post 5 videos a day, each video will have fewer views.
 
 #### Results:
-[Show images of videos]
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
 
 Bad Videos - I don't want to show videos as 'bad' as they aren't but less successful. eg. titles like 'vidcon vlog 9: joe smith'
 Not many people have bad titles and thumbnails nowadays. 
 
-
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img3.png "More successful video")
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img4.png "Less successful video")
 
 If content is good, title or thumbnail will be mostly irrelevant.
 
