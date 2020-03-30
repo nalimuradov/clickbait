@@ -11,17 +11,17 @@ Clickbait has been around since the dawn of the internet and continues to strive
 
 If a YouTube creator wants to catch the attention of a new viewer, they must do so with the only things they see on their recommended bar: the **title of the video** and the **thumbnail image**. 
 
-I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all.
+I wanted to see how significantly the 'first impression' of a video can affect the amount of views it will get, if at all. Using the data I found and the regressor I built, I 
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
 
 Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or not, assuming you are not familiar with the channel.
 
-NOTE: I am not affiliated with any of the channels used in the images.
+**NOTE:** I am not affiliated with any of the channels used in the images.
 
 
 
-## The Data:
+## The Data
 
 Obtaining suitable data was the most difficult part. The videos we want are the videos whose goal is to get viewed by as many people as possible. These are channels whose goal are to grow their platform through their content on the channel. As such, we must exclude videos like those for school projects, whose goal
 
@@ -45,7 +45,7 @@ The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos cou
 
 
 
-## Results:
+## Results
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
 
 Bad Videos - I don't want to show videos as 'bad' as they aren't but less successful. eg. titles like 'vidcon vlog 9: joe smith'
