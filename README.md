@@ -1,5 +1,7 @@
 # YouTube Video View Predictor
 
+Regressor that gauges how 
+
 https://nariman.herokuapp.com/
 
 Can take up to 30 seconds to load.
