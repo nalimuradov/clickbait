@@ -30,6 +30,8 @@ Obtaining suitable data was the most difficult part. The videos we want are the 
 Now that we have the videos, we need to extract the title, thumbnail URL, view count, and channel subscriber count for each one.
 The title and thumbnail will be converted into vectors to be used as the features, and the view count will be the label. It's clear we need the subscriber count to put the view count in context; a 10 000 view video for a 100 000 subscriber channel is low, but it's high for a channel with only 1 000 subscribers. 
 
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img5.png "Sample data for a video")
+
 Video recency is also important when selecting videos. Older videos are in the context of fewer subscribers and we must account for the
 growth of the channel over time.
 
