@@ -36,7 +36,7 @@ It's clear we need the subscriber count to put the view count into context; a 10
 
 >An example of the data for one random video to be used when training the models; the video_id as the key followed by the title, sub count, thumbnail URL, and view count in a list.
 
-It is also important to factor in post recency when selecting videos. Older videos are in the context of fewer subscribers and we must account for the growth of the channel over time.
+It is also important to factor in post recency when selecting videos. Older videos were viewed by fewer subscribers and we must account for the growth of the channel over time.
 
 #### Extracting information from the video title
 
@@ -46,8 +46,7 @@ I used 21 of the 36 Penn Treebank POS tags, excluding very rare parts of speech 
 
 #### Extracting information from the thumbnail image
 
-The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos couldn't guarantee having higher resolution thumbnails. Keeping it simple, I decided against using a pretrained net and relied on a basic regressor to see if any correlations are found. This part was fairly straightforward.
-Simply created  
+The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos couldn't guarantee having higher resolution thumbnails. The images were sent through the VGG16 architecture trained on ImageNet (without the last layer) to get a dense and vastly more useful feature matrix. These new feature matrices were then used to fit the regressor.
 
 
 
