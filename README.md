@@ -17,7 +17,7 @@ The goal of this regressor and study was to see how significantly those two fact
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
 
->Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or >not, assuming you are not familiar with the channel.
+>Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or not, assuming you are not familiar with the channel.
 
 **NOTE:** I am not affiliated with any of the channels used in these images.
 
@@ -34,7 +34,7 @@ It's clear we need the subscriber count to put the view count into context; a 10
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img5.png "Sample data for a video")
 
-Example of data for one random video to be used when training the models.
+>An example of the data for one random video to be used when training the models; the video_id as the key followed by the title, sub count, thumbnail URL, and view count in a list.
 
 It is also important to factor in post recency when selecting videos. Older videos are in the context of fewer subscribers and we must account for the growth of the channel over time.
 
