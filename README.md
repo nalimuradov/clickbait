@@ -17,7 +17,7 @@ The goal of this regressor and study was to see how significantly those two fact
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
 
-Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or not, assuming you are not familiar with the channel.
+>Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or >not, assuming you are not familiar with the channel.
 
 **NOTE:** I am not affiliated with any of the channels used in these images.
 
