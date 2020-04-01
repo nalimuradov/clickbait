@@ -42,24 +42,23 @@ It is also important to factor in post recency when selecting videos. Older vide
 
 Rather than using a bag of words that would require a large amount of data to prevent overfitting, I used NLTK's part-of-speech tagger and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
 
-I used 21 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count sequential pairs of tags found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find the value of having certain sequences of tags in the title.
+I used 22 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count sequential pairs of tags found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find the value of having certain sequences of tags in the title.
 
 #### Extracting information from the thumbnail image
 
-The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos couldn't guarantee having higher resolution thumbnails. The images were sent through the VGG16 architecture trained on ImageNet (without the last layer) to get a dense and vastly more useful feature matrix. These new feature matrices were then used to fit the regressor.
+The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos couldn't guarantee having higher resolution thumbnails. The images were sent through the ResNet50 architecture trained on ImageNet (without the last layer) to get a dense and vastly more useful feature matrix. These new feature matrices were then used to fit the regressor.
 
 
 
 ## Results
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
+> Above are some videos that had major success in terms of views.
 
 Bad Titles and Thumbnails - I don't want to show videos as 'bad' as they aren't but less successful. eg. titles like 'vidcon vlog 9: joe smith'
 Not many people have bad titles and thumbnails nowadays. 
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img3.png "More successful video")
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img4.png "Less successful video")
-
-If content is good, title or thumbnail will be mostly irrelevant.
 
 Some titles and thumbnails can generate more views than others, but alone cannot predict how successful a video will be. The content
 of the video will be the main driving force and no title or thumbnail can save an awful video.
@@ -68,6 +67,6 @@ eg. Minecraft creeper walkthrough part 55 vs. I TAME A MINECRAFT CREEPER (SUPER 
 
 Second title will get more views but if the video was bad from the get go it won't matter much. What matters is are you interesting? Is the video interesting?
 
-Creators have already caught on to ways of making their videos more appealing, so it's becoming rare. The videos with the lowest view counts usually had titles that were somehwat interesting with good thumbnails, but the content was bland. That's why there are videos with enticing titles or thumbnails with no views and vice versa.
+Nowadays, creators are already aware and many follow the same patterns of having . The videos with the lowest view counts usually had titles that were somehwat interesting with good thumbnails, but the content was bland. That's why there are videos with enticing titles or thumbnails with no views and vice versa.
 
 
