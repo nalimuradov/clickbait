@@ -52,7 +52,7 @@ The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos cou
 
 ## Results
 
-Interested in what makes a good title, I used the training data to find the larges tag count discrepencies between the popular and unpopular videos. 
+Interested in what makes a good title, I used the training data to find the largest tag count discrepencies between the popular and unpopular videos. 
 
 Naively, my initial impressions were that adjectives would be common in popular videos, as descriptive titles are more eye-catching.
 This was not the case. Most tags (including adjectives) were fairly evenly distributed among both sides, but there were some standouts.
@@ -60,7 +60,7 @@ This was not the case. Most tags (including adjectives) were fairly evenly distr
 **Wh-adverbs** were more common in the heavily viewed videos. 
 > Wh-adverb: "how", "when", "where", "why"
 
-This is neat as it shows that titles that **answer a question** or **are a question themselves** garner attention, such as "Why I eat quail eggs", or "How does tortoise live so long?"
+This is neat as it shows that titles that **answer a question** or **are a question themselves** garner attention, such as "Why I eat quail eggs", or "How does a tortoise live so long?"
 
 Strangely enough, **verbs** (both present and past-tense) seemed to make more appearances in the least-viewed video titles.
 
