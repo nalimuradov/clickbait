@@ -27,7 +27,7 @@ The goal of this regressor and study was to see how significantly those two fact
 
 The videos we want to use as test data should be from *content creator channels*. As such, I've excluded things like **tutorials** or **music videos** as the amount of views those videos will get will be almost entirely dependent on the subject matter. 
 
-> eg. A tutorial for Photoshop or a music video from Drake will always get more views than a tutorial or a music video by me.
+> A music video by Drake will always get more views than a music video by me, regardless of what the title or thumbnail are.
 
 From these videos, we need to extract the **title**, **thumbnail URL**, **view count**, and **channel subscriber count** for each one.
 The title and thumbnail will be converted into vectors to be used as the features, and the view count will be the label. 
