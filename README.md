@@ -60,7 +60,7 @@ This was not the case. Most tags (including adjectives) were fairly evenly distr
 **Wh-adverbs** were more common in the heavily viewed videos. 
 > Wh-adverb: "how", "when", "where", "why"
 
-This is neat as it shows that titles that **answer a question** or **are a question themselves** garner attention, such as "Why I eat quail eggs", or "How does a tortoise live so long?"
+This is neat as it shows that titles that **answer a question** or **are a question themselves** garner attention, such as *"Why I eat quail eggs"*, or *"How does a tortoise live so long?"*
 
 Strangely enough, **verbs** (both present and past-tense) seemed to make more appearances in the least-viewed video titles.
 
@@ -68,9 +68,9 @@ A **determiner** followed by a **noun** appeared more frequently in the successf
 
 > Determiner: "the", "these", "a"
 
-While obviously having two nouns back-to-back isn't going to sabotage your video, having certain tag sequences gives insight into what kind of content a user can expect to see. 
+While clearly having two nouns back-to-back isn't going to sabotage your video, having certain tag sequences gives insight into what kind of content a user can expect to see. 
 
-A video with many nouns such as *"VidCon Vlog 9: Joe Smith Interview"* doesn't give much incentive for the user to watch unless they are in the demographic of people who know **Joe Smith** or **VidCon**. On the other hand, naming the same video *"Who is Joe Smith: The most interesting man at VidCon"* gives a novel user more reason to click even if they're unfamiliar with the subject matter.
+A video with many nouns such as *"VidCon Vlog 9: Joe Smith Interview"* doesn't give much incentive for someone to watch unless they are in the demographic of people who know **Joe Smith** or **VidCon**. On the other hand, naming the same video *"Who is Joe Smith: The most interesting man at VidCon"* gives a novel user more reason to click even if they're unfamiliar with the subject matter.
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
 > Above are some videos that had major success in terms of views. Note the similarities in their title structure.
@@ -78,13 +78,6 @@ A video with many nouns such as *"VidCon Vlog 9: Joe Smith Interview"* doesn't g
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img3.png "More successful video")
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img4.png "Less successful video")
 
-Some titles and thumbnails can generate more views than others, but alone cannot predict how successful a video will be. The content
-of the video will be the main driving force and no title or thumbnail can save an awful video.
-
-eg. Minecraft creeper walkthrough part 55 vs. I TAME A MINECRAFT CREEPER (SUPER RARE)
-
-Second title will get more views but if the video was bad from the get go it won't matter much. What matters is are you interesting? Is the video interesting?
-
-Nowadays, creators are already aware and many follow the same patterns of having . The videos with the lowest view counts usually had titles that were somehwat interesting with good thumbnails, but the content was bland. That's why there are videos with enticing titles or thumbnails with no views and vice versa.
+While good titles and thumbnails can bump up the view count, they will not single-handedly be responsible for the success of a video. The content will be the main driving force and no title or thumbnail can save an awful video.
 
 
