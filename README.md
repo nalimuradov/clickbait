@@ -1,6 +1,6 @@
 # YouTube Video View Predictor
 
-Regressor that gauges how successful the YouTube title and thumbnail will be in garnering views.
+Regressor that gauges how successful a YouTube video title and thumbnail will be in garnering views.
 
 https://nariman.herokuapp.com/
 
@@ -25,7 +25,9 @@ The goal of this regressor and study was to see how significantly those two fact
 
 ## The Data
 
-Obtaining suitable data was the most difficult part. The videos we want to use as test data are the videos whose goal is to get viewed by as many people as possible.
+The videos we want to use as test data should be from 'content creator channels'. As such, I've excluded things like **tutorials** or **music videos** as the amount of views those videos will get will be almost entirely dependent on the subject matter. 
+
+> Eg. a tutorial for Adobe Photoshop or a music video from Drake will almost always get more views than a tutorial for or a music video by me.
 
 From these videos, we need to extract the **title**, **thumbnail URL**, **view count**, and **channel subscriber count** for each one.
 The title and thumbnail will be converted into vectors to be used as the features, and the view count will be the label. 
