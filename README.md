@@ -13,7 +13,7 @@ Clickbait has been around since the dawn of the internet and continues to strive
 
 If a YouTube creator wants to catch the attention of a new viewer, they must do so with the only things they see on their recommended bar: the **title of the video** and the **thumbnail image**. 
 
-The goal of this regressor and study was to see how significantly those two factors can affect the view count, if at all.
+The goal of this model was to see how significantly those two factors can affect the view count, if at all.
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
 
