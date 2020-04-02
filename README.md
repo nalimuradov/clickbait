@@ -1,4 +1,4 @@
-# YouTube Video View Predictor
+# YouTube View Predictor
 
 Regressor that gauges how successful a YouTube video title and thumbnail will be in garnering views.
 
