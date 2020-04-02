@@ -32,13 +32,13 @@ The videos we want to use as test data should be from *content creator channels*
 From these videos, we need to extract the **title**, **thumbnail URL**, **view count**, and **channel subscriber count** for each one.
 The title and thumbnail will be converted into vectors to be used as the features, and the view count will be the label. 
 
-It's clear we need the subscriber count to put the view count into context; a 10 000 view video is low for a 100 000 subscriber channel, but it's high for a channel with only 1 000 subscribers. 
+It's clear we need the subscriber count to put the view count into context; 10 000 views on a video is low for a 100 000 subscriber channel, but it's high for a channel with only 1 000 subscribers. 
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img5.png "Sample data for a video")
 
 >An example of the data for one random video to be used when training the models; the video_id as the key followed by the title, sub count, thumbnail URL, and view count in a list.
 
-It is also important to factor in post recency when selecting videos. Older videos were viewed by fewer subscribers and we must account for the growth of the channel over time.
+It is also important to factor in **post recency** when selecting videos. Older videos were viewed by fewer subscribers and we must account for the growth of the channel over time.
 
 #### Extracting information from the video title
 
