@@ -54,14 +54,19 @@ The thumbnail was extracted as a 480x360 matrix of RGB pixels as some videos cou
 
 Interested in what makes a good title, I used the training data to find the larges tag count discrepencies between the popular and unpopular videos. 
 
-A **determiner** followed by a **noun** appeared more frequently in the successful videos, while a **noun** followed by another **noun** was much more common in the unpopular videos. In fact, a noun followed by another noun appeared **70 more times** in the 200 worst videos than the 200 best videos.
+Naively, my initial impressions were that adjectives would be common in popular videos, as descriptive titles are more eye-catching.
+This was not the case. Most tags (including adjectives) were fairly evenly distributed among both sides, but there were some standouts.
+
+**Wh-adverbs** were more common in the heavily viewed videos. 
+Strangely enough, **verbs** (both present and past-tense) seemed to make more appearances in the least-viewed videos.
+
+> Wh-adverb: "how", "when", "where", "why"
+
+A **determiner** followed by a **noun** appeared more frequently in the successful videos, while a **noun** followed by another **noun** was much more common in the unpopular videos. In fact, a noun followed by another noun appeared **70 more times** in the 200 worst videos than they did in the 200 best videos.
+
+> Determiner: "The", "these", "a"
 
 
-
-Good tags are Wh-adverbs, 
-Worst tags were verbs (both past and present tense were bad). This is not to say avoid these, just that they were common among the least successful videos. Do what you will with that information.
-The most common word pair in the best videos was a Determiner followed by a Noun.
-The most common word pair in the worst videos was a Noun followed by another Noun. This was by far the biggest 
 
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
