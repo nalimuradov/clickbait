@@ -75,7 +75,7 @@ A video with many sequential nouns such as *"VidCon Vlog 9: Joe Smith Interview"
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
 > Above are some videos that had major success in terms of views. Note the similarities in their title structure.
 
-While good titles and thumbnails can bump up the view count, they will not single-handedly be responsible for the success of a video. The content will be the main driving force and no title or thumbnail can save an awful video.
+While good titles and thumbnails can bump up the view count, they will not single-handedly be responsible for the success of a video. The **quality of the content** will be the main driving force and no title or thumbnail can save an awful video.
 
 Feel free to use my [regressor](https://nariman.herokuapp.com/) to see how your **title** and **thumbnail** compare to the ones I trained on!
 
