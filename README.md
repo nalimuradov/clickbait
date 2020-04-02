@@ -58,22 +58,23 @@ Naively, my initial impressions were that adjectives would be common in popular 
 This was not the case. Most tags (including adjectives) were fairly evenly distributed among both sides, but there were some standouts.
 
 **Wh-adverbs** were more common in the heavily viewed videos. 
-Strangely enough, **verbs** (both present and past-tense) seemed to make more appearances in the least-viewed videos.
-
 > Wh-adverb: "how", "when", "where", "why"
+
+This is neat as it shows that titles that **answer a question** or **are a question themselves** garner attention, such as "Why I eat quail eggs", or "How does tortoise live so long?"
+
+Strangely enough, **verbs** (both present and past-tense) seemed to make more appearances in the least-viewed video titles.
 
 A **determiner** followed by a **noun** appeared more frequently in the successful videos, while a **noun** followed by another **noun** was much more common in the unpopular videos. In fact, a noun followed by another noun appeared **70 more times** in the 200 worst videos than they did in the 200 best videos.
 
-> Determiner: "The", "these", "a"
+> Determiner: "the", "these", "a"
 
+While obviously having two nouns back-to-back isn't going to sabotage your video, having certain tag sequence gives insight into what kind of content is in the video. A video called: "VidCon Vlog 9: Joe Smith Interview"
 
+For thumbnails, patterns were much more as image recognition requires more data and wasn't as defined . 
 
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
 > Above are some videos that had major success in terms of views.
-
-Bad Titles and Thumbnails - I don't want to show videos as 'bad' as they aren't but less successful. eg. titles like 'vidcon vlog 9: joe smith'
-Not many people have bad titles and thumbnails nowadays. 
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img3.png "More successful video")
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img4.png "Less successful video")
