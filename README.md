@@ -42,9 +42,9 @@ It is also important to factor in **post recency** when selecting videos. Older 
 
 #### Extracting information from the video title
 
-Rather than using a bag of words that would require a large amount of data to prevent overfitting, I used NLTK's part-of-speech tagger and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
+Rather than use a word count (which would require a large amount of data to prevent overfitting), I used NLTK's part-of-speech tagger and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
 
-I used 22 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count sequential pairs of tags found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find the value of having certain sequences of tags in the title.
+I used 22 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count **sequential pairs of tags** found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find the value of having certain sequences of tags in the title.
 
 #### Extracting information from the thumbnail image
 
