@@ -68,7 +68,7 @@ A **determiner** followed by a **noun** appeared more frequently in the successf
 
 > Determiner: "the", "these", "a"
 
-While obviously having two nouns back-to-back isn't going to sabotage your video, having certain tag sequence gives insight into what kind of content is in the video. A video called: "VidCon Vlog 9: Joe Smith Interview"
+While obviously having two nouns back-to-back isn't going to sabotage your video, having certain tag sequences gives insight into what kind of content a user can expect to see. A video with many nouns such as "VidCon Vlog 9: Joe Smith Interview" doesn't give as much incentive for the user to watch unless they are in the demographic of people who know "Joe Smith" or "VidCon". On the other hand, naming the same video "Who is Joe Smith: The smartest man at VidCon" may make someone click even if they are unfamiliar with "Joe Smith" or "VidCon".
 
 For thumbnails, patterns were much more as image recognition requires more data and wasn't as defined . 
 
