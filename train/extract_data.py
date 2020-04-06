@@ -1,18 +1,29 @@
 import json
 import urllib.request
-from train import video_data
+from train.data import video_ids
 
-api_key = r"AIzaSyDmVJu0dTtlKe36VTd2hmywO5pzPpSsGn4"
+def date_diff(date_recent, date_oldest):
+    year_recent, month_recent, day_recent = int(date_recent[0:4]), int(date_recent[5:7]), int(date_recent[8:10])
+    year_oldest, month_oldest, day_oldest = int(date_oldest[0:4]), int(date_oldest[5:7]), int(date_oldest[8:10])
+    return 365 * (year_recent - year_oldest) + 30 * (month_recent - month_oldest) + (day_recent - day_oldest)
 
 
 def get_videos_from_channel(channel_id):
-    video_ids = []
+    video_id_list = []
     channel_videos = urllib.request.urlopen(f"https://www.googleapis.com/youtube/v3/search?part=snippet&"
                                             f"channelId={channel_id}&type=video&order=date&maxResults=50&key={api_key}")
     channel_videos_json = json.loads(channel_videos.read())['items']
     for x in channel_videos_json:
-        video_ids.append(x['id']['videoId'])
-    return video_ids
+        video_id_list.append(x['id']['videoId'])
+    return video_id_list
+
+
+class Channel:
+    def __init__(self, channel_id):
+        channel_url = f"https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={channel_id}" \
+                      f"&type=video&order=date&maxResults=50&key={api_key}"
+        channel_url = urllib.request.urlopen(channel_url)
+        channel_videos_json = json.loads(channel_url.read())['items']
 
 
 class Video:
@@ -35,7 +46,7 @@ class Video:
         return self.metadata_info["items"][0]["snippet"]["title"]
 
     def get_thumbnail(self):
-        return self.metadata_info['items'][0]['snippet']['thumbnails']['default']['url']
+        return self.metadata_info['items'][0]['snippet']['thumbnails']['high']['url']
 
     def get_view_count(self):
         return self.statistics_info['items'][0]['statistics']['viewCount']
@@ -43,14 +54,10 @@ class Video:
     def get_subscriber_count(self):
         return self.channel_info['items'][0]['statistics']['subscriberCount']
 
+    # days for 50 uploads
     def get_vid_frequency(self):
         pass
-
-
-# key: video_id
-# value: [title, subs, thumb, views]
-videos = video_data.videos_3
-
+    
 
 def generate_data():
     training_data = {}
@@ -60,8 +67,7 @@ def generate_data():
         training_data[video] = (vid_data.get_video_title().lower(),
                                 vid_data.get_subscriber_count(),
                                 vid_data.get_thumbnail(),
-                                vid_data.get_view_count(),
-                                vid_data.get_vid_frequency())
+                                vid_data.get_view_count())
 
     with open('data.txt', 'w') as outfile:
         json.dump(training_data, outfile, indent=4)
@@ -69,39 +75,11 @@ def generate_data():
     return training_data
 
 
-def print_channel_videos():
-    print(get_videos_from_channel("UCn8zNIfYAQNdrFRrr8oibKw"))
-
-
+# data generation: find channel -> print video ids -> append to video_ids.py -> extract from there
 def main():
     # print_channel_videos()
     generate_data()
-    # print(len(videos))
 
 
 if __name__ == "__main__":
     main()
-
-
-'''
-polymatter: UCgNg3vwj3xt7QOrcIDaHdFg
-DW documentary: UCW39zufHfsuGgpLviKh297Q
-JRE clips: UCnxGkOGNMqQEUMvroOWps6Q
-Payette Forward: UCiIhoHKPMHm0tpga58IBQNQ
-TED: UCAuUUnT6oDeKwE6v1NGQxug
-Bon Appetit: UCbpMy0Fg74eXXkvxJrtEn3w
-jolly: UCOgGAfSUy5LvEyVS_LF5kdw
-thesoundproject: UCou6pqxzTSYf8t-ISPmeQQw
-
-vice: UCn8zNIfYAQNdrFRrr8oibKw
-FreeDocumentary: UCijcd0GR0fkxCAZwkiuWqtQ
-xbox: UCjBp_7RuDBUYbd1LegWEJ8g
-LiamThomson: UCU5O8FCtOTI4BWhfHF2LHJw
-RTGame: UCRC6cNamj9tYAO6h_RXd5xA
-Great Big Story: UCajXeitgFL-rb5-gXI-aG8Q
-3D SANAGO: UCd4FmcWIVdWAy0-Q8OJBloQ
-Wired: UCftwRNsjfRo08xYE31tkiyw
-NASA Video: UC_aP7p621ATY_yAa8jMqUVA
-Josephs Machines: UCbNvfx3rYYxEopnRGxfu53Q
-Kurzgesagt: UCsXVk37bltHxD1rDPwtNM8Q
-'''
