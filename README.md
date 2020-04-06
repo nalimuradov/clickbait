@@ -1,11 +1,11 @@
 # YouTube View Predictor
 
-Regressor that gauges how successful a YouTube video title and thumbnail will be in garnering views.
+Regressor that gauges how successful a YouTube video title and thumbnail will be in getting views.
 
 https://nariman.herokuapp.com/
 
 **Can take up to 30 seconds to load.**
-Some parts of the project such as the models or data are not in the repo due to size/privacy issues.
+Many parts of the project such as the models or data are not in the repo due to size/privacy issues.
 
 ##  Predicting the Success of a YouTube Video
 
