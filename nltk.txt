@@ -1,0 +1,5 @@
+punkt
+averaged_perceptron_tagger
+stopwords
+treebank
+twitter_samples
