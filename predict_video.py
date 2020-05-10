@@ -8,6 +8,12 @@ from flask import Flask, request, render_template
 import cv2
 import flask
 import scipy.stats as st
+# from keras.models import load_model
+# import tensorflow as tf
+# from tensorflow.python.keras.backend import set_session
+# from tensorflow.python.keras.models import load_model
+# from keras.applications.resnet50 import ResNet50
+# from keras.models import Model
 
 
 app = Flask(__name__)
@@ -24,6 +30,11 @@ def display():
     files = request.files.get('img_file')
     vid_title = data[0]
     thumbnail = cv2.imdecode(numpy.fromstring(files.read(), numpy.uint8), cv2.IMREAD_UNCHANGED)
+    print(thumbnail.shape)
+    thumbnail = Image.fromarray(thumbnail)
+    thumbnail = thumbnail.convert('RGB')
+    thumbnail = numpy.array(thumbnail)
+    print(thumbnail.shape)
     prediction = predict(vid_title, thumbnail)
 
     pre_note = "Your title and thumbnail are better than..."
@@ -37,13 +48,13 @@ def format_number(num):
 
 
 def predict(title, thumbnail):
-    img_model = pickle.load(open('models/resnet_img_model.sav', 'rb'))
+    img_model = pickle.load(open('models/def_img_model.sav', 'rb'))
     nlp_model = pickle.load(open('models/nlp_model.sav', 'rb'))
-    model_cut = load_model('models/resnet50.h5', compile=False)
+    # model_cut = load_model('models/resnet50.h5', compile=False)
 
-    img = [cv2.resize(thumbnail, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)]
-    img = numpy.asarray(img)
-    img = model_cut.predict(img)
+    # img = [cv2.resize(thumbnail, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)]
+    img = [cv2.resize(thumbnail, dsize=(120, 90), interpolation=cv2.INTER_CUBIC).flatten()]
+    # img = model_cut.predict(img)
 
     title = [train_nlp_model.vectorize_sentence(title)]
 
