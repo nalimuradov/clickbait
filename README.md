@@ -5,7 +5,7 @@ Regressor that gauges how successful a YouTube video title and thumbnail will be
 https://nariman.herokuapp.com/
 
 **Can take a few seconds to load.**
-Many parts of the project such as the models or data are not in the repo due to size/privacy.
+Several parts of the project such as the models or data are not in the repo due to size/privacy.
 
 ##  Predicting the Success of a YouTube Video
 
