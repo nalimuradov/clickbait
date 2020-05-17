@@ -2,7 +2,7 @@
 
 Regressor that gauges how successful a YouTube video title and thumbnail will be in getting views.
 
-https://nariman.herokuapp.com/
+Try it at: https://nariman.herokuapp.com/
 
 **Can take a few seconds to load.**
 Several parts of the project such as the models or data are not in the repo due to size/privacy.
