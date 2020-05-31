@@ -1,6 +1,6 @@
 # YouTube View Predictor
 
-Regressor that gauges how successful a YouTube video title and thumbnail will be in getting views.
+Regressor that gauges the impact of the video title and thumbnail on the viewership success of a YouTube video.
 
 Try it at: https://nariman.herokuapp.com/
 
