@@ -5,7 +5,7 @@ Regressor that gauges how the video title and thumbnail affect the viewership of
 Try it at: https://nariman.herokuapp.com/
 
 **Can take a few seconds to load.**
-Several parts of the project such as the models or data are not in the repo due to size/privacy.
+Models and training data are not in the repo due to size constraints.
 
 ##  Predicting the Success of a YouTube Video
 
