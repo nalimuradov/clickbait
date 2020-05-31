@@ -28,7 +28,7 @@ The goal of this model was to see how significantly those two factors can affect
 For each video, we need to extract the **title**, **thumbnail URL**, **view count**, and **channel subscriber count**.
 The title and thumbnail will be converted into vectors to be used as the features, and the view count will be the label. 
 
-It's clear we need the subscriber count to put the view count into context; 1000 views on a video is low for a channel with millions of subscribers, but it's high for a channel with only 100 subscribers. 
+It's clear we need the subscriber count to put the view count into context; 10 000 views on a video is low for a channel with millions of subscribers, but it's high for a channel with only 100 subscribers. 
 
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img5.png "Sample data for a video")
 
@@ -38,7 +38,7 @@ It is also important to factor in **post recency** when selecting videos. Older 
 
 #### Extracting information from the video title
 
-Rather than use a word count (which would require a large amount of data to prevent overfitting), I used NLTK's part-of-speech tagger and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
+Rather than use a word count (which would require a large amount of data to prevent overfitting), I used tagged words by their part-of-speech and did a count on those tags. I thought that instead of finding certain words that attract more views, I could find a certain sentence structure that would.
 
 I used 22 of the 36 Penn Treebank POS tags, excluding very rare parts of speech to have a smaller feature vector. This is important as I then expanded the feature vector to count **sequential pairs of tags** found in the title. For example, I would now also track how many times a noun followed by another noun appears. This would pseudo-track the word position and hopefully find the value of having certain sequences of tags in the title.
 
