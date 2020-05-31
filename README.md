@@ -72,8 +72,6 @@ A **determiner** followed by a **noun** appeared more frequently in the successf
 
 While having two nouns back-to-back isn't going to ruin your video, having certain tag sequences gives insight into what kind of content a user can expect to see. 
 
-A video with many sequential nouns such as *"VidCon Vlog 9: Joe Smith Interview"* doesn't give much incentive for someone to watch unless they are in the demographic of people who know **Joe Smith** or **VidCon**. On the other hand, naming the same video *"Who is Joe Smith: The most interesting man at VidCon"* gives a novel user a reason to click even if they're unfamiliar with the subject matter.
-
 ![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
 > Above are some videos that had major success in terms of views. Note the similarities in their title structure.
 
