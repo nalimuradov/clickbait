@@ -25,7 +25,7 @@ The goal of this model was to see how significantly those two factors can affect
 
 ## The Data
 
-For each video, we need to extract the **title**, **thumbnail URL**, **view count**, and **channel subscriber count** for each one.
+For each video, we need to extract the **title**, **thumbnail URL**, **view count**, and **channel subscriber count**.
 The title and thumbnail will be converted into vectors to be used as the features, and the view count will be the label. 
 
 It's clear we need the subscriber count to put the view count into context; 10 000 views on a video is low for a 100 000 subscriber channel, but it's high for a channel with only 1 000 subscribers. 
