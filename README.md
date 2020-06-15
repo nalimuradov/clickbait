@@ -15,7 +15,7 @@ If a YouTube creator wants to catch the attention of a new viewer, they must do 
 
 The goal of this model was to see how significantly those two factors can affect the view count, if at all.
 
-![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img1.png "Sample recommended video")
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/sample_video.png "Sample recommended video")
 
 >Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or not, assuming you are not familiar with the channel.
 
@@ -30,7 +30,7 @@ The title and thumbnail will be converted into vectors to be used as the feature
 
 It's clear we need the subscriber count to put the view count into context; 10 000 views on a video is low for a channel with millions of subscribers, but it's high for a channel with only 100 subscribers. 
 
-![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img5.png "Sample data for a video")
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/sample_data.png "Sample data for a video")
 
 >An example of the data for one random video to be used when training the models; the video_id as the key followed by the title, sub count, thumbnail URL, and view count in a list.
 
@@ -68,7 +68,7 @@ A **determiner** followed by a **noun** appeared more frequently in the successf
 
 While having two nouns back-to-back isn't going to ruin your video, having certain tag sequences gives insight into what kind of content a user can expect to see. 
 
-![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/img2.png "Successful videos")
+![alt text](https://github.com/nalimuradov/Video-View-Predictor/blob/master/images/successful_videos.png "Successful videos")
 > Above are some videos that had major success in terms of views. Note the similarities in their title structure.
 
 While good titles and thumbnails can bump up the view count, they will not single-handedly be responsible for the success of a video. The **quality of the content** will be the main driving force and no title or thumbnail can save an awful video.
