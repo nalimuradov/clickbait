@@ -2,12 +2,15 @@ import json
 import urllib.request
 from train.data import video_ids
 
+
+# helper function to find time difference between two dates
 def date_diff(date_recent, date_oldest):
     year_recent, month_recent, day_recent = int(date_recent[0:4]), int(date_recent[5:7]), int(date_recent[8:10])
     year_oldest, month_oldest, day_oldest = int(date_oldest[0:4]), int(date_oldest[5:7]), int(date_oldest[8:10])
     return 365 * (year_recent - year_oldest) + 30 * (month_recent - month_oldest) + (day_recent - day_oldest)
 
 
+# extract the 50 most recent videos of a channel given the channel_id
 def get_videos_from_channel(channel_id):
     video_id_list = []
     channel_videos = urllib.request.urlopen(f"https://www.googleapis.com/youtube/v3/search?part=snippet&"
@@ -18,6 +21,7 @@ def get_videos_from_channel(channel_id):
     return video_id_list
 
 
+# channel class for storing information of various YouTube channels
 class Channel:
     def __init__(self, channel_id):
         channel_url = f"https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={channel_id}" \
@@ -26,6 +30,7 @@ class Channel:
         channel_videos_json = json.loads(channel_url.read())['items']
 
 
+# video class for storing information of various YouTube videos
 class Video:
     def __init__(self, video_id):
         metadata_url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet&id={video_id}&key={api_key}"
@@ -59,6 +64,7 @@ class Video:
         pass
     
 
+# read from data and output as JSON
 def generate_data():
     training_data = {}
 

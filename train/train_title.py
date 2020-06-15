@@ -11,12 +11,14 @@ import statistics
 import numpy
 
 
+# dictionary of 22 most common POS tags
 pos_tags = {
     "CC": 0, "CD": 1, "DT": 2, "IN": 3, "JJ": 4, "JJS": 5, "MD": 6, "NN": 7, "NNS": 8, "NNP": 9, "POS": 10, "PRP": 11,
     "PRP$": 12, "RB": 13, "RP": 14, "TO": 15, "VB": 16, "VBD": 17, "VBG": 18, "VBP": 19, "VBZ": 20, "WRB": 21
 }
 
 
+# function to remove stop words (eg. 'a', 'the')
 def remove_stopwords(text):
     stop_words = set(stopwords.words('english'))
     word_tokens = nltk.tokenize.word_tokenize(text)
@@ -24,12 +26,15 @@ def remove_stopwords(text):
     return filtered_sentence
 
 
+# returns tags given a sentence
 def pos_tagging(sentence):
     tokens = nltk.word_tokenize(sentence.lower())
     tags = nltk.pos_tag(tokens)
     return tags
 
 
+# after being tagged, create feature vector of the part-of-speech counts 
+# this vector will be used to train the model
 def vectorize_sentence(sentence):
     pos_count = [0]*(len(pos_tags)*(len(pos_tags) + 1))
     pos = pos_tagging(sentence)
@@ -47,6 +52,7 @@ def vectorize_sentence(sentence):
     return pos_count
 
 
+# testing word2vec
 def run_word2vec():
     with open('data.txt') as json_file:
         data = json.load(json_file)
@@ -79,12 +85,14 @@ def preprocess_data():
     return features, labels
 
 
+# classifying based on extracted features (vector of pos tags)
 def train_model(features, labels):
     regr = svm.SVR()
     regr.fit(features, labels)
     pickle.dump(regr, open('nlp_model.sav', 'wb'))
 
 
+# run to train the model
 def main():
     features, labels = preprocess_data()
     train_model(features, labels)

@@ -8,7 +8,7 @@ from io import BytesIO
 import math
 import cv2
 
-
+# load data and clean for model training
 def preprocess_data():
     with open('data/video_data.txt') as json_file:
         data = json.load(json_file)
@@ -27,8 +27,7 @@ def preprocess_data():
     return features, labels
 
 
-# input 224, 224, 3
-# output 2048
+# features extracted using transfer learning
 def extract_features(x):
     resnet_features = []
 
@@ -47,12 +46,14 @@ def extract_features(x):
     return resnet_features
 
 
+# classifying based on extracted features
 def train_model(features, labels):
     regr = svm.SVR()
     regr.fit(features, labels)
     pickle.dump(regr, open('resnet_img_model.sav', 'wb'))
 
 
+# run to train the model
 def main():
     features, labels = preprocess_data()
     features = extract_features(features)
