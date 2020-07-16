@@ -23,8 +23,9 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+
 # calculate results on request (submission of image and title)
-@app.route('/api/', methods=['POST'])
+@app.route('/', methods=['POST'])
 def display():
     data = [x for x in request.form.values()]
     files = request.files.get('img_file')
@@ -33,6 +34,7 @@ def display():
     thumbnail = Image.fromarray(thumbnail)
     thumbnail = thumbnail.convert('RGB')
     thumbnail = numpy.array(thumbnail)
+    print(thumbnail.shape)
     prediction = predict(vid_title, thumbnail)
 
     # output on user submission
@@ -42,9 +44,11 @@ def display():
     return render_template('index.html', prediction_text='{}%'.format(prediction),
                            pre_note=pre_note, post_note=post_note, sub_post_note=sub_post_note)
 
+
 # helper function to format output
 def format_number(num):
     return '{:,}'.format(num).replace(',', ' ')
+
 
 # use models to fit input given by the user - result is the view success of the video relative to training data
 def predict(title, thumbnail):
