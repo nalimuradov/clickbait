@@ -2,7 +2,7 @@
 
 Regressor that gauges how the video title and thumbnail affect the viewership of a YouTube video.
 
-Try it at: https://nariman.herokuapp.com/
+Try it at: https://predictor.nalimuradov.com
 
 **Can take a few seconds to load.**
 Models and training data are not in the repo due to size constraints.
