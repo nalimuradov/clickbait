@@ -1,4 +1,4 @@
-# YouTube View Predictor
+# YouTube Thumbnail Optimizer
 
 Regressor that gauges how the video title and thumbnail affect the viewership of a YouTube video.
 
