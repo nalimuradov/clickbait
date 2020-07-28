@@ -8,12 +8,6 @@ from flask import Flask, request, render_template
 import cv2
 import flask
 import scipy.stats as st
-# from keras.models import load_model
-# import tensorflow as tf
-# from tensorflow.python.keras.backend import set_session
-# from tensorflow.python.keras.models import load_model
-# from keras.applications.resnet50 import ResNet50
-# from keras.models import Model
 
 # flask app setup
 app = Flask(__name__)
