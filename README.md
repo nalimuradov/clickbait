@@ -1,4 +1,4 @@
-# YouTube Thumbnail Optimizer
+# YouTube Thumbnail Evaluator
 
 Regressor that gauges how the video title and thumbnail affect the viewership of a YouTube video.
 
