@@ -19,7 +19,7 @@ The goal of this model was to see how significantly those two factors can affect
 
 >Above is an example of what you see when you are recommended a video. The title and the thumbnail are what decide if you click on it or not, assuming you are not familiar with the channel.
 
-**NOTE:** I am not affiliated with any of the channels used in these images.
+**Note:** I am not affiliated with any of the channels used in these images.
 
 
 
