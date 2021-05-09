@@ -72,6 +72,3 @@ While having two nouns back-to-back isn't going to ruin your video, having certa
 > Above are some videos that had major success in terms of views. Note the similarities in their title structure.
 
 While good titles and thumbnails can bump up the view count, they will not single-handedly be responsible for the success of a video. The **quality of the content** will be the main driving force and no title or thumbnail can save an awful video.
-
-Feel free to use my [regressor](https://thumbnail.nalimuradov.com) to see how your **title** and **thumbnail** compare to the ones I trained on!
-
