@@ -2,9 +2,6 @@
 
 Regressor that gauges how the video title and thumbnail affect the viewership of a YouTube video.
 
-Try it at: https://thumbnail.nalimuradov.com
-
-**Can take some time to initially load.**
 Models and training data are not in the repo due to size constraints.
 
 ##  Predicting the Success of a YouTube Video
